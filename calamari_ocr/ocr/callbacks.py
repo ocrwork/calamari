@@ -6,7 +6,7 @@ class TrainingCallback:
                 example_pred, example_gt):
         pass
 
-    def early_stopping(self, eval_cer, n_total, n_best):
+    def early_stopping(self, eval_cer, n_total, n_best, iter):
         pass
 
     def training_finished(self, total_time, total_iters):
@@ -28,7 +28,7 @@ class ConsoleTrainingCallback:
         print("  PRED: '{}{}{}'".format(lr[bidi.get_base_level(example_pred)], example_pred, "\u202C"))
         print("  TRUE: '{}{}{}'".format(lr[bidi.get_base_level(example_gt)], example_gt, "\u202C"))
 
-    def early_stopping(self, eval_cer, n_total, n_best):
+    def early_stopping(self, eval_cer, n_total, n_best, iter):
         pass
 
     def training_finished(self, total_time, total_iters):
